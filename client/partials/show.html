@@ -1,0 +1,31 @@
+
+<div ng-controller="showController">
+
+    <div class="header">
+      <h4><a href="#/home">Home</a></h4>
+      <h4><a href="#/question/{{question._id}}/new_answer"><button>Answer this Question</button></a></h4>
+      <input type = 'submit' value="logout" ng-click='logout()'>
+      <hr>
+    </div>
+
+
+
+  <h2>{{question.question}}</h2>
+  <!-- <h2>{{question.answers}}</h2> -->
+
+
+  <div ng-repeat="answer in question.answers">
+    <p>
+      {{answer.answer}}
+    </p>
+    <p>
+      [# of likes]
+    </p>
+    <p><a href="#"><button>
+      Like!
+    </button></a></p>
+    <hr>
+  </div>
+
+
+</div>

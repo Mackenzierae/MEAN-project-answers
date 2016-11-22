@@ -1,0 +1,26 @@
+<div class="newContainer" ng-controller="questionController">
+  <div class="header">
+    <h4><a href="#/home">Home</a></h4>
+    <input type = 'submit' value="logout" ng-click='logout()'>
+    <hr>
+  </div>
+
+
+  <div class="new_question">
+    <h1>New Question</h1>
+
+    <form ng-submit="newQuestion(question)">
+      <h3>Question: <input type="text" ng-model="question.question"></h3>
+      <h3>Description (optional): <input type="text" ng-model="question.description"></h3>
+      <h5><a href="#/home"><button>Cancel</button></a></h5>
+      <input type="submit" value="Submit">
+
+    </form>
+  </div>
+
+
+
+
+
+
+</div>

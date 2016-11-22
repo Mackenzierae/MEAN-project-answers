@@ -1,0 +1,31 @@
+<div class="homeContainer" ng-controller="homeController">
+  <div class="header">
+    <h2>Hi {{logged_user.name}}!! </h2> <input type = 'submit' value="logout" ng-click='logout()'>
+   <h4><a href="#/new_question"><button>Add a Question</button></a></h4>
+    <hr>
+  </div>
+
+  <div class="all_questions" ng-controller="questionController">
+    <!-- <h3>Search: <input type="text"></h3> -->
+      <h3>  Search: <input type="text" ng-model="filter_name" value="Search"></h3>
+    <div class="table">
+          <table>
+            <tr>
+              <th class="head">Question</th>
+              <th class="head">Answers</th>
+              <th class="head">Action</th>
+              <th class="head">Action</th>
+            </tr>
+            <tr ng-repeat='question in all_questions'>
+              <td>{{question.question}}</td>
+              <td>{{question.answers.length}}</td>
+              <td><a href="#/question/{{question._id}}/"><button>Show</button></a></td>
+              <td><a href="#/question/{{question._id}}/new_answer"><button>Answer</button></a></td>
+              <!-- <td><a href="#/question/{{question._id}}/new_answer"><button>Answer</button></a></td> -->
+            </tr>
+          </table>
+        </div>
+  </div>
+
+
+</div>

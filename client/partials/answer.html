@@ -1,0 +1,36 @@
+
+<div ng-controller="showController">
+
+    <div class="header">
+      <h4><a href="#/home">Home</a></h4>
+      <!-- <h4><a href="#/question/{{question._id}}"><button>Go Back to Question</button></a></h4> -->
+      <div>
+      <input type ="submit" value="logout" ng-click='logout()'>
+    </div>
+      <hr>
+    </div>
+
+
+    <!-- <div class="quick_show" ng-controller="showController"> -->
+
+      <h2>{{question.question}}</h2>
+    <!-- </div> -->
+
+    <div class="form">
+
+    </div>
+    <form ng-submit="newAnswer(new_answer, question._id)">
+      <h3>Your Answer: <input type="text" ng-model="new_answer.answer"></h3>
+      <h3>Supporting details for your answer (optional): <input type="text" ng-model="new_answer.supporting_deats"></h3>
+      <h5><a href="#/home"><button>Cancel</button></a></h5>
+      <input type="submit" value="Submit">
+
+    </form>
+
+  </div>
+
+
+
+
+
+</div>
